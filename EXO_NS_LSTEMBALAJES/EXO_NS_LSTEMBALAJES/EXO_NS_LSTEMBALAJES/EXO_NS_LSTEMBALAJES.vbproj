@@ -10,7 +10,8 @@
     <AssemblyName>EXO_NS_LSTEMBALAJES</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>Windows</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,29 +65,39 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EXO_BasicDLL, Version=10.0.1.4, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="EXO_BasicDLL, Version=10.0.1.8, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\EXO_Kernel_10.0.1.8\x64\Desarrollo\EXO_BasicDLL.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\EXO_BasicDLL.dll</HintPath>
     </Reference>
-    <Reference Include="EXO_CleanCOM, Version=10.0.1.4, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="EXO_CleanCOM, Version=10.0.1.8, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\EXO_Kernel_10.0.1.8\x64\Desarrollo\EXO_CleanCOM.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\EXO_CleanCOM.dll</HintPath>
     </Reference>
-    <Reference Include="EXO_DIAPI, Version=10.0.1.4, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="EXO_DIAPI, Version=10.0.1.8, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\EXO_Kernel_10.0.1.8\x64\Desarrollo\EXO_DIAPI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\EXO_DIAPI.dll</HintPath>
     </Reference>
-    <Reference Include="EXO_Generales, Version=10.0.1.4, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="EXO_Generales, Version=10.0.1.8, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\EXO_Kernel_10.0.1.8\x64\Desarrollo\EXO_Generales.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\EXO_Generales.dll</HintPath>
     </Reference>
-    <Reference Include="EXO_Log, Version=10.0.1.4, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="EXO_Log, Version=10.0.1.8, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\EXO_Kernel_10.0.1.8\x64\Desarrollo\EXO_Log.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\EXO_Log.dll</HintPath>
     </Reference>
-    <Reference Include="EXO_UIAPI, Version=10.0.1.4, Culture=neutral, processorArchitecture=AMD64">
+    <Reference Include="EXO_UIAPI, Version=10.0.1.8, Culture=neutral, processorArchitecture=AMD64">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\EXO_Kernel_10.0.1.8\x64\Desarrollo\EXO_UIAPI.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\EXO_UIAPI.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SAPbobsCOM, Version=10.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\Interop.SAPbobsCOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SAPbouiCOM, Version=10.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\..\..\..\..\EXO_Kernel_10.0.1.10\x64\desarrollo\Interop.SAPbouiCOM.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -116,6 +127,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -165,32 +177,12 @@
     <EmbeddedResource Include="XML_BD\UDFs_IGE1.xml" />
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="SAPbobsCOM">
-      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30100}</Guid>
-      <VersionMajor>10</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="SAPbouiCOM">
-      <Guid>{6048236A-956D-498D-A6F1-9C81C13AB6E8}</Guid>
-      <VersionMajor>10</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="XML_BD\UDFs_OPKG.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetPath)" "E:\Desarrollo\EXO_Kernel_10.0.1.8\x64\Desarrollo\DLLs\$(TargetFileName)"
-copy "$(TargetPath)" "\\xper-rdpdes02\compartidaB1\Lingotes\Ficheros\10.Dll_64\EXT\$(TargetFileName)"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" "E:\Desarrollo\EXO_Kernel_10.0.1.10\x64\desarrollo\DLLs\$(TargetFileName)"
+rem copy "$(TargetPath)" "\\xper-rdpdes02\compartidaB1\Lingotes\Ficheros\10.Dll_64\EXT\$(TargetFileName)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
