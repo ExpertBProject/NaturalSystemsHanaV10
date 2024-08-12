@@ -1,0 +1,11 @@
+﻿<Application>
+  <Menus>
+    <action type="add">
+      <Menu Checked="0" Enabled="1" FatherUID="3072" Image="" String="" Type="3" UniqueID="EXO-MnLEm1"></Menu> <!--Inventario-->
+      <Menu Checked="0" Enabled="1" FatherUID="3072" Image="" String="Lista de embalajes - Expediciones" Type="1" UniqueID="EXO-MnLEmb"></Menu>
+      <Menu Checked="0" Enabled="1" FatherUID="3072" Image="" String="Gestión de Envíos - Transporte" Type="1" UniqueID="EXO-MnGETR"></Menu>
+      <Menu Checked="0" Enabled="1" FatherUID="3072" Image="" String="" Type="3" UniqueID="EXO-MnLEm2"></Menu>
+    </action>
+  </Menus>
+</Application>
+
